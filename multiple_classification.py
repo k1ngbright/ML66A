@@ -16,7 +16,8 @@ bmi_model = pickle.load(open("bmi_model.sav",'rb'))
 
 with st.sidebar:
     selected = option_menu(
-        'Classification',['Loan','Riding,'BMI']
+        'Classification', ['Loan', 'Riding', 'BMI'] # แก้ไขเครื่องหมาย ' ที่หายไปตรงนี้
+    
         )
 
 gender_map = {
@@ -227,4 +228,5 @@ if(selected == 'Riding'):
           
 
     st.success(Riding_prediction)
+
 
