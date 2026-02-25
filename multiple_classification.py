@@ -24,9 +24,9 @@ default_map = {'No': 0, 'Yes': 1}
 if(selected == 'BMI'):
     st.title('BMI Calculation')
     
-    name = st.text_input('ชื่อ-นามสกุล')
-    weight = st.text_input('น้ำหนัก (กิโลกรัม)')
-    height = st.text_input('ส่วนสูง (เซนติเมตร)')
+    name = st.text_input('Gender')
+    weight = st.text_input('Height')
+    height = st.text_input('Weight')
     
     if st.button('Predict BMI'):
         if weight and height:
@@ -90,3 +90,4 @@ if(selected == 'Riding'):
         riding_prediction = riding_model.predict([[float(Income), float(LotSize)]])
         result = 'Owner' if riding_prediction[0] == 1 else 'Non Owner'
         st.success(f'Result: {result}')
+
