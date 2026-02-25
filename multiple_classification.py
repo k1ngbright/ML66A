@@ -58,7 +58,7 @@ default_map = {
 if(selected == 'BMI'):
     st.title('Loan Classification')
     
-    person_age = st.text_input('person_age')
+   
     person_gender = st.selectbox('person_gender', gender_map)
     person_education = st.selectbox('person_education', education_map)
     person_income = st.text_input('person_income') 
@@ -77,9 +77,9 @@ if(selected == 'BMI'):
     loan_prediction = ''
     
     if st.button('Predict'):
-        loan_prediction = loan_model.predict([
+        loan_prediction = BMI_model.predict([
             [
-                float(person_age),
+               
                 gender_map[person_gender],
                 education_map[person_education],
                 float(person_income),
@@ -228,5 +228,6 @@ if(selected == 'Riding'):
           
 
     st.success(Riding_prediction)
+
 
 
